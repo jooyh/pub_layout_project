@@ -1,0 +1,272 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAMPLE_01</title>
+    <!-- <link rel="stylesheet" href="./lib/swiper.min.css"> -->
+    <link rel="stylesheet" href="./lib/ygmSlide.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- <script type="text/javascript" src="./lib/swiper.min.js"></script> -->
+    <script type="text/javascript" src="./lib/ygmSlide.min.js"></script>
+    <script type="text/javascript" src="./lib/jquery-3.2.1.min.js"></script>
+    
+
+
+</head>
+<body>
+
+    <div id="container-wrapper">
+        <!-- HEADER START -->
+        <header>
+            <div class="hd-logo-box">
+                <img src="./img/_logo.png" alt="시완글로벌 로고"/>
+            </div>
+            <div class="hd-r-menu">
+                <div class="hd-input-box">
+                    <input type="text" placeholder="가을 맞이 화장품 컬랙션 15% 세일"/>
+                    <button type="button" class="btn-search">검색</button>
+                </div>
+                <ul class="hd-menu">
+                    <li>
+                        <a href="javascript:void(0)">로그아웃</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">나의정보</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">내쇼핑</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">장바구니</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">고객센터</a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <!-- // HEADER END -->
+
+        <div class="container-wrap">
+            <!-- NAVI START -->
+            <nav>
+                <h2 class="nav-title">전체메뉴</h2>
+                <ul class="nav-menu-list">
+                    <li>
+                        <strong class="menu-tit">SHOP</strong>
+                        <ul class="nav-submenu-list">
+                            <li><a href="javascript:void(0)">인기 분양몰</a></li>
+                            <li><a href="javascript:void(0)">샵 둘러보기</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong class="menu-tit">CATEGORY</strong>
+                        <ul class="nav-submenu-list">
+                            <li><a href="javascript:void(0)">가전</a></li>
+                            <li><a href="javascript:void(0)">뷰티</a></li>
+                            <li><a href="javascript:void(0)">인테리어</a></li>
+                            <li><a href="javascript:void(0)">스포츠</a></li>
+                            <li><a href="javascript:void(0)">패션</a></li>
+                            <li><a href="javascript:void(0)">유아동</a></li>
+                            <li><a href="javascript:void(0)">팬시/문구</a></li>
+                            <li><a href="javascript:void(0)">식품</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong class="menu-tit">REGULAR SHOP</strong>
+                        <ul class="nav-submenu-list">
+                            <li><a href="javascript:void(0)">미미네 옷가게</a></li>
+                            <li><a href="javascript:void(0)">시크우먼</a></li>
+                            <li><a href="javascript:void(0)">다모아 가전마당</a></li>
+                            <li><a href="javascript:void(0)">패션</a></li>
+                            <li><a href="javascript:void(0)">유아동</a></li>
+                            <li><a href="javascript:void(0)">팬시/문구</a></li>
+                            <li><a href="javascript:void(0)">식품</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="btn-area">
+                    <button type="button" class="btn-more navi-style">더보기</button>
+                </div>
+            </nav>
+            <!-- // NAVI END -->
+            
+            <section class="container">
+                <article class="banner">
+                    <!-- <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">Slide 1</div>
+                            <div class="swiper-slide">Slide 2</div>
+                            <div class="swiper-slide">Slide 3</div>
+                            ...
+                        </div>
+                        <div class="swiper-pagination"></div>
+        
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+        
+                        <div class="swiper-scrollbar"></div>
+                    </div> -->
+                    <div class="wrapper banner-slide-area" id="banner-slide">
+                        <div class="slide-container">
+                            <div class="slide-wrap">
+                                <div class="slide-box" style="background:#CD5C5C;">
+                                    <p>slide 00</p>
+                                    <p>slide 00</p>
+                                    <p>slide 00</p>
+                                    <p>slide 00</p>
+                                </div>
+                                <div class="slide-box" style="background:#F08080">
+                                    <p>slide 01</p>
+                                </div>
+                                <div class="slide-box" style="background:#FA8072;">
+                                    <p>slide 02</p>
+                                </div>
+                                <div class="slide-box" style="background:#E9967A;">
+                                    <p>slide 03</p>
+                                </div>
+                                <div class="slide-box" style="background:#FFA07A;">
+                                    <p>slide 04</p>
+                                </div>
+                                <div class="slide-box" style="background:#E74C3C;">
+                                    <p>slide 05</p>
+                                </div>
+                                <div class="slide-box" style="background:#7FB3D5;">
+                                    <p>slide 06</p>
+                                </div>
+                                <div class="slide-box" style="background:#16A085;">
+                                    <p>slide 07</p>
+                                </div>
+                                <div class="slide-box" style="background:#B7950B;">
+                                    <p>slide 08</p>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-p" style="display:none">이전</button>
+                            <button type="button" class="btn btn-n" style="display:none">다음</button>
+                            <div class="navi"></div>
+                        </div>
+                    </div>
+                </article>
+        
+                <article>
+                    <h3 class="main-title">금주 추천상품</h3>
+                    <div class="tab-area">
+                        <ul class="list-box">
+                            <li class="active">가전샵</li>
+                            <li>뷰티샵</li>
+                            <li>인테리어샵</li>
+                            <li>스포프샵</li>
+                            <li>패션샵</li>
+                        </ul>
+                    </div>
+                    <div class="wrapper thumbnail-slide-area" id="thumbnail-slide">
+                        <div class="slide-container thumbnail-list-box"> <!--thumbnail-list-box 지워도??-->
+                            <ul class="slide-wrap">
+                                <li class="slide-box" style="border:1px solid #ccc;">
+                                    <div class="tn-img-box">
+                                        <img src="" />
+                                    </div>
+                                    <div class="tn-info-box">
+                                        <strong class="제품설명이 들어갑니다. 제품설명이 들어갑니다."></strong>
+                                        <span class="num"><span>28,000</span>원</span>
+                                        <span class="name">상점이름</span>
+                                        <span class="icon-num">15,000</span>
+                                    </div>
+                                </li>
+                                <li class="slide-box" style="border:1px solid #ccc;">
+                                    <div class="tn-img-box">
+                                        <img src="" />
+                                    </div>
+                                    <div class="tn-info-box">
+                                        <strong class="제품설명이 들어갑니다. 제품설명이 들어갑니다."></strong>
+                                        <span class="num"><span>28,000</span>원</span>
+                                        <span class="name">상점이름</span>
+                                        <span class="icon-num">15,000</span>
+                                    </div>
+                                </li>
+                                <li class="slide-box" style="border:1px solid #ccc;">
+                                    <div class="tn-img-box">
+                                        <img src="" />
+                                    </div>
+                                    <div class="tn-info-box">
+                                        <strong class="제품설명이 들어갑니다. 제품설명이 들어갑니다."></strong>
+                                        <span class="num"><span>28,000</span>원</span>
+                                        <span class="name">상점이름</span>
+                                        <span class="icon-num">15,000</span>
+                                    </div>
+                                </li>
+                                <li class="slide-box" style="border:1px solid #ccc;">
+                                    <div class="tn-img-box">
+                                        <img src="" />
+                                    </div>
+                                    <div class="tn-info-box">
+                                        <strong class="제품설명이 들어갑니다. 제품설명이 들어갑니다."></strong>
+                                        <span class="num"><span>28,000</span>원</span>
+                                        <span class="name">상점이름</span>
+                                        <span class="icon-num">15,000</span>
+                                    </div>
+                                </li>
+                            </ul>
+                            <button type="button" class="btn btn-p" style="display:none">이전</button>
+                            <button type="button" class="btn btn-n" style="display:none">다음</button>
+                            <div class="navi"></div>
+                        </div>
+                    </div>
+                    <div class="thumbnail-list">
+                        <ul>
+                           
+                        </ul>
+                    </div>
+                </article>
+                <article>
+                    <h3 class="main-title">추천 신규샵</h3>
+                </article>
+            </section>
+        </div>
+
+        <footer>
+
+        </footer>
+
+
+    </div>
+    <script>
+      
+    // var swiper = new Swiper('.swiper-container', {
+    //   pagination: {
+    //     el: '.swiper-pagination',
+    //     type: 'progressbar',
+    //   },
+    //   navigation: {
+    //     nextEl: '.swiper-button-next',
+    //     prevEl: '.swiper-button-prev',
+    //   },
+    // });
+    
+       
+        var banner_ygmSlide = new YgmSlide({
+            idx: 4,
+            elId: "banner-slide",
+            auto: true,
+            popable: false,
+            loop: false,
+            autoDuration: 3000,
+            navi: true,
+        });
+        var thumbnail_ygmSlide = new YgmSlide({
+            idx: 1,
+            elId: "thumbnail-slide",
+            auto: false,
+            popable: false,
+            loop: false,
+            autoDuration: 3000,
+            navi: false,
+        });
+
+    
+  
+    </script>
+</body>
+</html>

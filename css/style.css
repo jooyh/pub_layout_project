@@ -52,7 +52,7 @@ article:not(.banner) .main-title {position:absolute;top:-6px;left:50%;display:in
 .banner-slide-area .navi span{width:15px;height:15px;margin-left:10px;border:none;background:#fff;opacity:0.5;}
 .banner-slide-area .navi span.active {opacity:1;}
 .banner-slide-area + article {margin-top:70px;}
-
+ 
 /* TAB */
 .tab-area .list-box {display:table;width:100%;margin-top:40px;text-align:center;}
 .tab-area .list-box li {display:table-cell;width:1%;border:1px solid #b5b5b5;padding:13px 0 14px;border-left:none;font-size:16px;color:#333;}

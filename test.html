@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAMPLE_01</title>
+    <script type="text/javascript" src="./lib/jquery-3.2.1.min.js"></script>
+        
+
+
+</head>
+<body>
+    <style>
+        input {display:block;width:500px;height:40px;margin-top:30px;border:1px solid #000;}
+        input:focus {border:1px solid red;}
+    </style>
+
+    <input type="text" class="a" />
+    <input type="text" class="b" />
+    <input type="text" class="c"/>
+    <input type="text" class="d"/>
+    <input type="text" class="e"/>
+    <input type="text" />
+    <input type="text" />
+    <input type="text" />
+    <input type="text" />
+    <input type="text" />
+    <input type="text" />
+    <input type="text" />
+    <input type="text" />
+    <input type="text" />
+    <input type="text" />
+    <input type="text" />
+    <input type="text" />
+    <input type="text" />
+    <input type="text" />
+    <input type="text" />
+    
+  
+    <script>
+       
+
+
+        $(document).on("focus","input",function(e){
+            var targetOffset = $(e.target).offset().top;
+            var windowH = $(window).height() / 5;
+            var scrollTop = $(window).scrollTop()
+            $('html, body').animate({"scrollTop" : targetOffset - windowH });
+        })
+  
+    </script>
+</body>
+</html>

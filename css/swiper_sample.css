@@ -27,7 +27,7 @@ body {background: #eee;font-family: Helvetica Neue, Helvetica, Arial, sans-serif
 .visual-box .text-box .title {padding-bottom:50px;font-size:40px;}
 
 
-.swiper-slide-active {}
+.swiper-slide-active .visual-box.no1 {}
 .swiper-slide-active {}
 .swiper-slide-active {}
 .swiper-slide-active {}

@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" contents="width=device-width, initial-scale=1.0">
+    <title>SAMPLE_01</title>
+    <link rel="stylesheet" href="./lib/swiper.min.css">
+    <link rel="stylesheet" href="./css/swiper_sample.css">
+
+    <script type="text/javascript" src="./lib/swiper.min.js"></script>
+    <script type="text/javascript" src="./lib/jquery-3.2.1.min.js"></script>
+
+</head>
+<body>
+   <!-- Swiper -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <!-- 111111111111111111 -->
+            <div class="swiper-slide">                                                 
+                <div class="visual-box no1">
+                    <div class="bg-box">
+                        <img src="" alt="배경" style="background-color: rgb(241, 198, 211);"/>
+                    </div>
+                    <div class="text-box">
+                        <p class="title"><strong>BUSINESS</strong></p>
+                        <p class="text">
+                            Savings Banks were established<br>
+                            In 1972 as Local financial institutions.
+                        </p>
+                        <div class="btn-area">
+                            <button type="button" class="btn-more">Details</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="center-arrow">
+                    <div class="bar">
+                        <div class="btn-arrow gray"><a href="javascript:void(0);">다음 페이지 이동</a></div>
+                    </div>
+                </div>
+            </div>
+            <!-- 22222222222222222 -->
+            <div class="swiper-slide">                                                 
+                <div class="visual-box no2">
+                    <div class="bg-box">
+                        <img src="" alt="배경" style="background-color: rgb(218, 198, 241);"/>
+                    </div>
+                    <div class="text-box r-type">
+                        <p class="title"><strong>KFSB’s History</strong></p>
+                        <p class="text">
+                            KFSB is a non-profit special corporation to promote sound<br>
+                            Development of saving banks and to protect customers
+                        </p>
+                        <div class="btn-area">
+                            <button type="button" class="btn-more">Details</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="center-arrow">
+                    <div class="bar">
+                        <div class="btn-arrow gray"><a href="javascript:void(0);">다음 페이지 이동</a></div>
+                    </div>
+                </div>
+            </div>
+            <!-- 3333333333333333333333 -->
+            <div class="swiper-slide">                                                 
+                <div class="visual-box no3">
+                    <div class="bg-box">
+                        <img src="" alt="배경" style="background-color: rgb(198, 199, 241);"/>
+                    </div>
+                    <div class="text-box">
+                        <p class="title"><strong>Present’s Message</strong></p>
+                        <p class="text">
+                            Customer Satisfaction, Realization of Values,<br>
+                            National Development
+                        </p>
+                        <div class="btn-area">
+                            <button type="button" class="btn-more">Details</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="center-arrow">
+                    <div class="bar">
+                        <div class="btn-arrow gray"><a href="javascript:void(0);">다음 페이지 이동</a></div>
+                    </div>
+                </div>
+            </div>
+            <!-- 44444444444444444444444444444444 -->
+            <div class="swiper-slide">                                                 
+                <div class="visual-box no4">
+                    <div class="bg-box">
+                        <img src="" alt="배경" style="background-color: rgb(198, 241, 215);"/>
+                    </div>
+                    <div class="text-box r-type">
+                        <p class="title"><span>Seed Money Bank</span><strong>Savings Banks</strong></p>
+                        <p class="text">
+                            If you don’t have seed money<br>
+                            You can start with renewal Saving Banks
+                        </p>
+                        <div class="btn-area">
+                            <button type="button" class="btn-more">Details</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="center-arrow">
+                    <div class="bar">
+                        <div class="btn-arrow gray"><a href="javascript:void(0);">다음 페이지 이동</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination">
+        </div>
+        <div class="swiper-play-stop"><a href="javascript:void(0);" class="stop">정지</a></div>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            var test = new Swiper('.swiper-container', {
+                direction: 'horizontal',
+                slidesPerView: 1,
+                spaceBetween: 30,
+                mousewheel: true,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: true,
+                },
+            });
+
+            // $('.swiper-container').on('mouseenter', function(e){
+            //     test.autoplay.stop();
+            // })
+            // $('.swiper-container').on('mouseleave', function(e){
+            //     test.autoplay.start();
+            // })
+
+            //슬라이드 변경 시작
+            test.on('slideChangeTransitionStart', function(e){
+                console.log("qwqwqw");
+            });
+
+            // 화면 중앙 넥스트 버튼 
+            $(".btn-arrow").click(function(){
+                test.slideNext(); // 다음 슬라이드로 이동 
+            })
+        });
+
+    </script>
+</body>
+</html>

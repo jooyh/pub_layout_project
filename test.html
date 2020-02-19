@@ -39,13 +39,10 @@
     
   
     <script>
-       
-
 
         $(document).on("focus","input",function(e){
             var targetOffset = $(e.target).offset().top;
             var windowH = $(window).height() / 5;
-            var scrollTop = $(window).scrollTop()
             $('html, body').animate({"scrollTop" : targetOffset - windowH });
         })
   

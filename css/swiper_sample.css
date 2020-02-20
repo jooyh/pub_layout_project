@@ -10,13 +10,10 @@ li {list-style:none;}
 i {display:inline-block;background-repeat:no-repeat;background-position:center;background-size:cover;}
 button {border:none;background:transparent;}
 
+html, body {height: 100%;} /* 풀페이지일경우에만 필요 */
 
-
-
-html, body {position: relative;height: 100%;}
-body {background: #eee;font-family: Helvetica Neue, Helvetica, Arial, sans-serif;font-size: 14px;color:#000;margin: 0;padding: 0;}
-.swiper-container {width: 100%;height: 100%;margin-left: auto;margin-right: auto;}
-.swiper-slide {font-size: 18px;display: -webkit-box;display: -ms-flexbox;display: -webkit-flex;display: flex;-webkit-box-pack: center;-ms-flex-pack: center;-webkit-justify-content: center;justify-content: center;-webkit-box-align: center;-ms-flex-align: center;-webkit-align-items: center;align-items: center;}
+.visual-content {position:relative;height:100%;} /* 풀페이지 아닐경우 height 조정 */
+.visual-content .swiper-container {width: 100%;height: 100%;}
 
 .visual-box {position:relative;width:100%;height:100%;}
 .visual-box .bg-box {width:100%;height:100%;}
@@ -26,15 +23,32 @@ body {background: #eee;font-family: Helvetica Neue, Helvetica, Arial, sans-serif
 .visual-box .text-box.r-type {left:auto;right:50px;top:33%; z-index:10;}
 .visual-box .text-box .title {padding-bottom:50px;font-size:40px;}
 
+/* 슬라이드 활성화 전 스타일 */
+.visual-box.no1 .text-box .title {opacity:0;transform: translate(0,80px);transition: all 1.5s;}
+.visual-box.no2 .text-box .title {opacity:0;transform: translate(0,80px);transition: all 1.5s;}
+.visual-box.no2 .text-box .btn-area {opacity:0;transform: translate(0,80px);transition: all 1.5s 0.3s;}
+.visual-box.no3 .text-box .title {opacity:0;transform: translate(0,-80px);transition: all 1.5s;}
+.visual-box.no3 .text-box .text {opacity:0;transform: translate(0,-80px);transition: all 1.5s 0.2s;}
+.visual-box.no3 .text-box .btn-area {opacity:0;transform: translate(0,-80px);transition: all 1.5s 0.4s;}
+.visual-box.no4 .text-box .title {opacity:0;transform: translate(0,80px);transition: all 1.5s;}
+.visual-box.no4 .text-box .text {opacity:0;transform: translate(0,80px);transition: all 1.5s 0.2s;}
+.visual-box.no4 .text-box .btn-area {opacity:0;transform: translate(0,80px);transition: all 1.5s 0.4s;}
 
-.swiper-slide-active .visual-box.no1 {}
-.swiper-slide-active {}
-.swiper-slide-active {}
-.swiper-slide-active {}
-.swiper-slide-active {}
+/* 슬라이드 활성화 후 스타일 */
+.swiper-slide-active .visual-box .text-box .title,
+.swiper-slide-active .visual-box .text-box .text,
+.swiper-slide-active .visual-box .text-box .btn-area {opacity:1;transform: translate(0,0);}
 
-
+/*중앙 넥스트 버튼 바*/
 .center-arrow {position:absolute;left:0;right:0;top:40%;height:2px;background:red;}
 .center-arrow .bar {width:100%;height:100%;}
-.center-arrow .bar .btn-arrow {position:absolute;left:0;top:-4px;width:100px;height:10px;font-size: 0;background:#000;transition:all 6s;}
+.center-arrow .bar .btn-arrow {position:absolute;left:0;top:-4px;width:100px;height:10px;font-size: 0;background:#000;transition:all linear 4.8s;}
 .swiper-slide-active .center-arrow .bar .btn-arrow {left:100%;}
+
+/* 페이지네이션 및 재생버튼 */
+.swiper-pagination-area {overflow:hidden;position:absolute;right:75px;bottom:75px;z-index:10;}
+.swiper-pagination-area:after {content:'';display:block;clear:both;}
+.swiper-pagination-area .pagination-btn-area {float:left;}
+.swiper-pagination-area .swiper-pagination {position:initial;float:left;}
+.swiper-pagination-area .swiper-pagination .swiper-pagination-bullet {width:15px;height:15px;margin-left:10px;}
+.swiper-pagination-area .swiper-pagination .swiper-pagination-bullet:first-child {margin-left:0;}

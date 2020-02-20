@@ -10,17 +10,17 @@ li {list-style:none;}
 i {display:inline-block;background-repeat:no-repeat;background-position:center;background-size:cover;}
 button {border:none;background:transparent;}
 
-html, body {height: 100%;} /* 풀페이지일경우에만 필요 */
+html, body {height: 100%;}
 
-.visual-content {position:relative;height:100%;} /* 풀페이지 아닐경우 height 조정 */
+.visual-content {position:relative;height:100%;} 
 .visual-content .swiper-container {width: 100%;height: 100%;}
 
 .visual-box {position:relative;width:100%;height:100%;}
 .visual-box .bg-box {width:100%;height:100%;}
 .visual-box .bg-box img {display:inline-block;width:100%;height:100%;}
 .visual-box .btn-area .btn-more {font-size:20px;padding:5px;margin-top:50px;border:1px solid #000;}
-.visual-box .text-box {position: absolute;left:50px;top:33%; z-index:10;}
-.visual-box .text-box.r-type {left:auto;right:50px;top:33%; z-index:10;}
+.visual-box .text-box {position: absolute;left:50px;top:33%;z-index:10;}
+.visual-box .text-box.r-type {left:auto;right:50px;top:33%;z-index:10;}
 .visual-box .text-box .title {padding-bottom:50px;font-size:40px;}
 
 /* 슬라이드 활성화 전 스타일 */
@@ -42,8 +42,8 @@ html, body {height: 100%;} /* 풀페이지일경우에만 필요 */
 /*중앙 넥스트 버튼 바*/
 .center-arrow {position:absolute;left:0;right:0;top:40%;height:2px;background:red;}
 .center-arrow .bar {width:100%;height:100%;}
-.center-arrow .bar .btn-arrow {position:absolute;left:0;top:-4px;width:100px;height:10px;font-size: 0;background:#000;transition:all linear 4.8s;}
-.swiper-slide-active .center-arrow .bar .btn-arrow {left:100%;}
+.center-arrow .bar .btn-arrow {position:absolute;left:0;top:-4px;width:100px;height:10px;font-size: 0;background:#000;transition:all linear 4.3s;}
+.swiper-slide-active .center-arrow .bar .btn-arrow {left:98%;}
 
 /* 페이지네이션 및 재생버튼 */
 .swiper-pagination-area {overflow:hidden;position:absolute;right:75px;bottom:75px;z-index:10;}

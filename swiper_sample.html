@@ -114,7 +114,7 @@
                 <div class="swiper-pagination">
                 </div>
                 <div class="pagination-btn-area">
-                    <button type="button" class="btn-play play">재생</button>
+                    <button type="button" class="btn-play play">정지</button>
                 </div>
             </div>
         </div>
@@ -126,15 +126,21 @@
             var test = new Swiper('.swiper-container', {
                 direction: 'horizontal',
                 slidesPerView: 1,
-                spaceBetween: 30,
+                spaceBetween: 0,
+                sensitivity :0,
                 mousewheel: true,
                 pagination: {
                     el: '.swiper-pagination',
                     clickable: true,
+                    bulletElement : "button"
                 },
+                simulateTouch: 0,
                 autoplay: {
-                    delay: 5000,
+                    delay: 4000,
                     disableOnInteraction: true,
+                },keyboard: {
+                    enabled: true,
+                    onlyInViewport: false,
                 },
             });
 
@@ -142,32 +148,39 @@
              $('.btn-play').on('click', function(e){
                 if ($(this).hasClass("stop")) {
                     $(this).removeClass("stop").addClass("play");
-                    $(this).text("재생");
+                    $(this).text("정지");
                     test.autoplay.start();
                 } else {
                     $(this).removeClass("play").addClass("stop");
-                    $(this).text("정지");
+                    $(this).text("재생");
                     test.autoplay.stop();
                 }
             })
 
-            /* 화면 중앙 넥스트 버튼 */
+            //마우스 휠로 슬라이드 변경 시 재생 버튼 정지로 변경
+            $('body').on('mousewheel', function(e){
+                $('.btn-play').removeClass('play').addClass('stop');
+                $(".btn-play").text("재생");
+            });
+
+            /* 화면 중앙 넥스트 버튼 클릭 */
             $(".btn-arrow").click(function(){
-                test.slideNext(); // 다음 슬라이드로 이동 
+                test.slideNext();
+                $('.btn-play').removeClass('play').addClass('stop');
+                $(".btn-play").text("재생");
             })
 
-            /* 스와이퍼 mouseenter 슬라이드 멈춤 필요시 주석 제거 */
-            // $('.swiper-container').on('mouseenter', function(e){
-            //     test.autoplay.stop();
-            // })
-            // $('.swiper-container').on('mouseleave', function(e){
-            //     test.autoplay.start();
-            // })
+            // 페이지 네이션 클릭 시 슬라이드 멈춤
+            $('.swiper-pagination-bullet').on('click', function(e){
+                $('.btn-play').removeClass('play').addClass('stop');
+                $(".btn-play").text("재생");
+                test.autoplay.stop();
+            });
 
-            /* 슬라이드 변경 시작 시점 */
-            // test.on('slideChangeTransitionStart', function(e){
-            // });
-
+            //슬라이드 변경 끝
+            test.on('slideChangeTransitionEnd', function(e){
+                $('.swiper-slide-active').focus();
+            });
         });
 
     </script>

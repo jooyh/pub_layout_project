@@ -29,10 +29,24 @@ header .hd-r-menu .hd-menu li a {font-size:13px;color:#444;}
 header .hd-r-menu .hd-menu li a::before {content:'';display:block;width:28px;height:28px;margin:0 auto;background:url(../img/icon_hd_menu.png) no-repeat top center;background-size:cover;}
 
 /* FOOTER */
-footer {width:100%;border-top:1px solid #e5e5e5;}
-footer .ft-link-list:after {content:'';display:inline-block;clear:both;}
-footer .ft-link-list li {float:left;}
+footer {width:100%;min-width:1500px;border-top:1px solid #e5e5e5;}
+footer .ft-link-list:after {content:'';display:block;clear:both;}
+footer .ft-link-list {max-width:1500px;margin:0 auto;}
+footer .ft-link-list li {float:left;margin-right:14px;padding:16px 0;font-size:14px;color:#444;}
 footer .ft-address-wrap {border-top:1px solid #bbc4c1;}
+footer .ft-address-wrap .ft-address-r-l-box {max-width:1500px;margin:0 auto;padding:50px 0;}
+footer .ft-address-wrap .ft-address-r-l-box:after {content:'';display:block;clear:both;}
+footer .ft-address-wrap .ft-left {float:left;}
+footer .ft-address-wrap .ft-left address .txt {font-size:13px;font-style:normal;color:#666;line-height:19px;}
+footer .ft-address-wrap .ft-right {float:right;}
+footer .ft-address-wrap .ft-right .ft-service-info .txt-box {display:inline-block;font-size:13px;line-height:22px;}
+footer .ft-address-wrap .ft-right .ft-service-info .btn-area {display:inline-block;margin-left:15px;}
+footer .ft-address-wrap .ft-right .ft-service-info .btn-ft-service {display:inline-block;padding:3px 15px;border:1px solid #888;font-size:12px;}
+footer .ft-address-wrap .ft-right .mark-box-area {margin-top:18px}
+footer .ft-address-wrap .ft-right .mark-box-area .mark-box {display:inline-block;}
+footer .ft-address-wrap .ft-right .mark-box-area .img-box {display:inline-block;width:42px;height:42px;background:rgb(184, 28, 41);vertical-align:middle;}
+footer .ft-address-wrap .ft-right .mark-box-area .img-box img {display:inline-block;width:100%;height:100%;}
+footer .ft-address-wrap .ft-right .mark-box-area .mark-info-txt {display:inline-block;font-size:12px;vertical-align:middle;}
 
 /* NAVI */
 nav {float:left;width:220px;padding-bottom:30px;border: 1px solid #d9d9d9;}
@@ -137,7 +151,6 @@ article.bottom-menu {border-top:0;}
 .b-menu-list-box .menu-list .info-box .phone-num {font-size:20px;color:#666;line-height:1;}
 .b-menu-list-box .menu-list .btn-more {position:absolute;top:15px;right:40px;font-size:14px;color:#333;}
 .b-menu-list-box .menu-list .btn-more:after {content:'+';display:inline-block;margin-left:5px;font-size:18px;}
-
 
 .dot-list li {margin-top:10px;font-size:14px;color:#666;}
 .dot-list li:first-child {margin-top:0;}
